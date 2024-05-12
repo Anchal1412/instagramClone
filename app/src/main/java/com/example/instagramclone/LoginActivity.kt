@@ -12,15 +12,21 @@ import com.example.instagramclone.databinding.ActivityLoginBinding
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
+
+
+
+
 class LoginActivity : AppCompatActivity() {
     private val binding by lazy{
         ActivityLoginBinding.inflate(layoutInflater)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(binding.root)
             binding.loginBtn.setOnClickListener{
+
                 if(binding.email.editText?.text.toString().equals("") or
                     binding.pass.editText?.text.toString().equals("") ){
                     Toast.makeText(this@LoginActivity, "Please all the details", Toast.LENGTH_SHORT).show()
